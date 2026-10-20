@@ -1,0 +1,625 @@
+/* ===== Design Futurista / Tecnológico ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-deep: #05070f;
+  --bg: #0a0e1a;
+  --bg-card: rgba(12, 18, 36, 0.75);
+  --bg-card-solid: #0c1224;
+  --primary: #00f0ff;
+  --primary-dim: #00b8c4;
+  --primary-glow: rgba(0, 240, 255, 0.35);
+  --secondary: #7b5cff;
+  --secondary-glow: rgba(123, 92, 255, 0.3);
+  --accent: #ff2d95;
+  --success: #00e676;
+  --danger: #ff3d71;
+  --warning: #ffaa00;
+  --text: #e8f0ff;
+  --text-muted: #8899bb;
+  --border: rgba(0, 240, 255, 0.18);
+  --border-strong: rgba(0, 240, 255, 0.4);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 0 20px rgba(0, 240, 255, 0.08), 0 8px 32px rgba(0, 0, 0, 0.4);
+  --font: "Segoe UI", system-ui, -apple-system, "Inter", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg-deep);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 240, 255, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(123, 92, 255, 0.1), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 100%, rgba(255, 45, 149, 0.06), transparent),
+    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  background-attachment: fixed;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 12px var(--primary-glow);
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: rgba(0, 240, 255, 0.1);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--primary);
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ===== Header futurista ===== */
+header {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 40, 60, 0.9), rgba(20, 10, 50, 0.95));
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.05) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), var(--accent), transparent);
+  opacity: 0.7;
+}
+
+header h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #fff 0%, var(--primary) 50%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  text-shadow: none;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ===== Cards de aulas ===== */
+.aulas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.aula-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s, box-shadow 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.aula-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.aula-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: 0 0 30px var(--primary-glow), var(--shadow);
+}
+
+.aula-card:hover::before {
+  opacity: 1;
+}
+
+.aula-card .numero {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.aula-card .numero::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.aula-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.aula-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: 1.3rem;
+}
+
+.aula-card .acoes {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* ===== Botões ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-dim), var(--primary));
+  color: #001018;
+  box-shadow: 0 0 16px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary), #67f6ff);
+  color: #001018;
+  text-decoration: none;
+  box-shadow: 0 0 24px var(--primary-glow);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.btn-outline:hover {
+  background: rgba(0, 240, 255, 0.08);
+  border-color: var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #00c853, var(--success));
+  color: #001a0a;
+  box-shadow: 0 0 14px rgba(0, 230, 118, 0.3);
+}
+
+.btn-success:hover {
+  filter: brightness(1.1);
+  color: #001a0a;
+  text-decoration: none;
+}
+
+/* ===== Página de atividades ===== */
+.atividades-header {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.atividades-header h1 {
+  color: #fff;
+  font-size: 1.35rem;
+}
+
+.quiz-container {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.questao {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.questao:last-of-type {
+  border-bottom: none;
+}
+
+.questao h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.opcao:hover {
+  background: rgba(0, 240, 255, 0.06);
+  border-color: var(--border-strong);
+}
+
+.opcao input {
+  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+}
+
+.opcao.correta {
+  border-color: var(--success);
+  background: rgba(0, 230, 118, 0.1);
+  box-shadow: 0 0 12px rgba(0, 230, 118, 0.15);
+}
+
+.opcao.errada {
+  border-color: var(--danger);
+  background: rgba(255, 61, 113, 0.1);
+  box-shadow: 0 0 12px rgba(255, 61, 113, 0.15);
+}
+
+.resultado {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-top: 1.5rem;
+  display: none;
+  border: 1px solid transparent;
+}
+
+.resultado.mostrar {
+  display: block;
+}
+
+.resultado.bom {
+  background: rgba(0, 230, 118, 0.1);
+  border-color: rgba(0, 230, 118, 0.35);
+  color: var(--success);
+}
+
+.resultado.medio {
+  background: rgba(255, 170, 0, 0.1);
+  border-color: rgba(255, 170, 0, 0.35);
+  color: var(--warning);
+}
+
+.resultado.ruim {
+  background: rgba(255, 61, 113, 0.1);
+  border-color: rgba(255, 61, 113, 0.35);
+  color: var(--danger);
+}
+
+.resultado h2 {
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.progresso {
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.progresso-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 999px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.acoes-quiz {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.feedback {
+  margin-top: 0.8rem;
+  padding: 0.65rem 0.95rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.feedback.mostrar {
+  display: block;
+}
+
+.feedback.ok {
+  background: rgba(0, 230, 118, 0.12);
+  color: var(--success);
+  border: 1px solid rgba(0, 230, 118, 0.3);
+}
+
+.feedback.erro {
+  background: rgba(255, 61, 113, 0.12);
+  color: var(--danger);
+  border: 1px solid rgba(255, 61, 113, 0.3);
+}
+
+/* ===== Seções de conteúdo / cards genéricos ===== */
+.section-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.section-card h3 {
+  color: #fff;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+/* ===== Mídia: imagens e vídeos ===== */
+.media-block {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.media-block img,
+.media-block video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 24px rgba(0, 240, 255, 0.1);
+}
+
+.media-block figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 24px rgba(0, 240, 255, 0.12);
+  background: #000;
+  margin: 1.25rem 0;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+figure.conteudo-img {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figure.conteudo-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 24px rgba(0, 240, 255, 0.1);
+}
+
+figure.conteudo-img figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.galeria figure {
+  margin: 0;
+  background: var(--bg-card-solid);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.galeria figure:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 16px var(--primary-glow);
+}
+
+.galeria img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.galeria figcaption {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+  letter-spacing: 0.03em;
+}
+
+footer a {
+  color: var(--primary-dim);
+}
+
+/* ===== Reveal.js overrides (quando o CSS é carregado nos slides) ===== */
+.reveal section img {
+  max-height: 480px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+.reveal .video-wrapper {
+  margin: 0.8rem auto;
+  max-width: 900px;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.55rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .aula-card .acoes {
+    flex-direction: column;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 240, 255, 0.25);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 240, 255, 0.45);
+}
