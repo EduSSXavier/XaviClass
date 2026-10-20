@@ -1,0 +1,15 @@
+{
+  "name": "material-didatico-gh-pages",
+  "version": "1.0.0",
+  "description": "Material didático com slides e atividades monitoradas no GitHub Pages",
+  "scripts": {
+    "build:slides": "marp docs/aulas/**/slides.md --html --allow-local-files --html true",
+    "dev": "echo 'Abra docs/index.html no navegador ou use um servidor local (npx serve docs)'"
+  },
+  "keywords": ["educacao", "slides", "github-pages", "marp"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.0.0"
+  }
+}

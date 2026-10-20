@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividades – Aula 01</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+  <div class="atividades-header">
+    <div>
+      <a href="../../index.html" style="color: var(--text-muted); font-size: 0.9rem;">← Voltar às aulas</a>
+      <h1 style="font-size: 1.35rem; margin-top: 0.3rem;">Aula 01 — Atividades de Fixação</h1>
+    </div>
+    <a class="btn btn-outline" href="slides.html">Ver slides</a>
+  </div>
+
+  <main class="container">
+    <section class="section-card" style="max-width: 720px; margin: 0 auto 2rem;">
+      <h3>Material de apoio</h3>
+
+      <figure class="conteudo-img">
+        <img src="../../assets/media/imagens/placeholder-diagrama.svg" alt="Diagrama ilustrativo">
+        <figcaption>Figura 1 – Visão geral dos componentes do material didático</figcaption>
+      </figure>
+
+      <p style="margin: 1rem 0 0.5rem; color: var(--text-muted); font-size: 0.95rem;">
+        Vídeo curto de apresentação (exemplo):
+      </p>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Vídeo de apoio"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <div class="quiz-container">
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Responda às questões abaixo. Você receberá feedback imediato e poderá copiar o resultado para enviar ao professor.
+      </p>
+
+      <div id="quiz"></div>
+    </div>
+
+    <section class="section-card" style="max-width: 720px; margin: 0 auto 3rem;">
+      <h3>Envio formal (opcional)</h3>
+      <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">
+        Se o professor disponibilizar um formulário, ele aparecerá aqui.
+        Substitua pelo link do seu Google Forms / Microsoft Forms.
+      </p>
+      <div style="background: rgba(0,0,0,0.35); border-radius: 8px; padding: 2rem; text-align: center; color: var(--text-muted); border: 1px dashed var(--border);">
+        [Espaço reservado para Google Forms / Microsoft Forms]
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Material Didático · Aula 01
+  </footer>
+
+  <script src="../../assets/js/quiz.js"></script>
+  <script>
+    initQuiz({
+      aulaId: "01-introducao",
+      questoes: [
+        {
+          id: "q1",
+          pergunta: "Qual é o principal objetivo deste material didático?",
+          opcoes: [
+            "Substituir completamente as aulas presenciais",
+            "Oferecer slides e atividades de fixação acessíveis a qualquer momento",
+            "Servir apenas como repositório de PDFs",
+            "Avaliar os alunos sem feedback"
+          ],
+          correta: 1
+        },
+        {
+          id: "q2",
+          pergunta: "Onde o progresso dos quizzes é salvo por padrão?",
+          opcoes: [
+            "No servidor do GitHub",
+            "Em um banco de dados externo",
+            "No navegador do aluno (localStorage)",
+            "Não é salvo"
+          ],
+          correta: 2
+        },
+        {
+          id: "q3",
+          pergunta: "Como o professor adiciona uma nova aula durante o semestre?",
+          opcoes: [
+            "Precisa pedir para um administrador do sistema",
+            "Cria uma nova pasta, edita os arquivos e faz commit/push",
+            "Só é possível no início do semestre",
+            "Envia um e-mail para a equipe de TI"
+          ],
+          correta: 1
+        },
+        {
+          id: "q4",
+          pergunta: "Qual é a forma recomendada de incluir vídeos longos no material?",
+          opcoes: [
+            "Sempre fazer upload de arquivos MP4 grandes no repositório",
+            "Preferir embeds do YouTube/Vimeo e usar MP4 local só para vídeos curtos",
+            "Não é possível incluir vídeos",
+            "Apenas links externos sem embed"
+          ],
+          correta: 1
+        }
+      ]
+    });
+  </script>
+</body>
+</html>

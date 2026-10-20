@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0a0e1a"/>
+  <rect x="40" y="40" width="720" height="370" rx="12" fill="#0c1224" stroke="rgba(0,240,255,0.25)" stroke-width="2"/>
+  <text x="400" y="110" font-family="system-ui,sans-serif" font-size="26" fill="#8899bb" text-anchor="middle">Diagrama / Imagem de exemplo</text>
+  <rect x="150" y="160" width="140" height="80" rx="8" fill="#00b8c4"/>
+  <text x="220" y="208" font-family="system-ui,sans-serif" font-size="18" fill="#001018" text-anchor="middle" font-weight="600">A</text>
+  <rect x="330" y="160" width="140" height="80" rx="8" fill="#7b5cff"/>
+  <text x="400" y="208" font-family="system-ui,sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="600">B</text>
+  <rect x="510" y="160" width="140" height="80" rx="8" fill="#00e676"/>
+  <text x="580" y="208" font-family="system-ui,sans-serif" font-size="18" fill="#001a0a" text-anchor="middle" font-weight="600">C</text>
+  <path d="M290 200 H330" stroke="#00f0ff" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M470 200 H510" stroke="#00f0ff" stroke-width="3" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#00f0ff"/>
+    </marker>
+  </defs>
+  <text x="400" y="310" font-family="system-ui,sans-serif" font-size="15" fill="#64748b" text-anchor="middle">Substitua este arquivo pela sua imagem real</text>
+  <text x="400" y="340" font-family="system-ui,sans-serif" font-size="13" fill="#4a5568" text-anchor="middle">docs/assets/media/imagens/ ou recursos/ da aula</text>
+</svg>

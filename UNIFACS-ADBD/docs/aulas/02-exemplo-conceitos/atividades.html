@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividades – Aula 02</title>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+<body>
+  <div class="atividades-header">
+    <div>
+      <a href="../../index.html" style="color: var(--text-muted); font-size: 0.9rem;">← Voltar às aulas</a>
+      <h1 style="font-size: 1.35rem; margin-top: 0.3rem;">Aula 02 — Atividades de Fixação</h1>
+    </div>
+    <a class="btn btn-outline" href="slides.html">Ver slides</a>
+  </div>
+
+  <main class="container">
+    <div class="quiz-container">
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Teste seus conhecimentos sobre os conceitos fundamentais apresentados na aula.
+      </p>
+
+      <div id="quiz"></div>
+    </div>
+
+    <section class="section-card" style="max-width: 720px; margin: 0 auto 3rem;">
+      <h3>Envio formal (opcional)</h3>
+      <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">
+        Espaço para embutir Google Forms ou Microsoft Forms caso o professor queira coleta centralizada de respostas.
+      </p>
+      <div style="background: rgba(0,0,0,0.35); border-radius: 8px; padding: 2rem; text-align: center; color: var(--text-muted); border: 1px dashed var(--border);">
+        [Espaço reservado para formulário externo]
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Material Didático · Aula 02
+  </footer>
+
+  <script src="../../assets/js/quiz.js"></script>
+  <script>
+    initQuiz({
+      aulaId: "02-exemplo-conceitos",
+      questoes: [
+        {
+          id: "q1",
+          pergunta: "Qual é a principal ideia do Conceito 1 apresentado na aula?",
+          opcoes: [
+            "É apenas um exemplo ilustrativo sem importância",
+            "Representa a definição central do tema",
+            "Serve somente para avaliação formal",
+            "Não tem relação com os outros conceitos"
+          ],
+          correta: 1
+        },
+        {
+          id: "q2",
+          pergunta: "Por que é importante compreender as relações entre os elementos (Conceito 2)?",
+          opcoes: [
+            "Porque deixa o slide mais bonito",
+            "Para aplicar o conhecimento corretamente em diferentes contextos",
+            "Não é importante, basta decorar as definições",
+            "Apenas para preencher o tempo da aula"
+          ],
+          correta: 1
+        },
+        {
+          id: "q3",
+          pergunta: "Qual das opções abaixo é uma armadilha comum mencionada na aula?",
+          opcoes: [
+            "Estudar com antecedência",
+            "Aplicar a regra sem verificar o contexto",
+            "Fazer as atividades de fixação",
+            "Perguntar quando tiver dúvida"
+          ],
+          correta: 1
+        },
+        {
+          id: "q4",
+          pergunta: "O que se recomenda fazer após esta aula?",
+          opcoes: [
+            "Ignorar a atividade de fixação",
+            "Realizar a atividade, praticar os exemplos e anotar dúvidas",
+            "Esperar a prova final para estudar",
+            "Copiar as respostas de um colega"
+          ],
+          correta: 1
+        }
+      ]
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula 01 – Introdução</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" />
+  <style>
+    :root {
+      --r-background-color: #05070f;
+      --r-main-font: "Segoe UI", system-ui, sans-serif;
+      --r-heading-font: "Segoe UI", system-ui, sans-serif;
+      --r-main-color: #e8f0ff;
+      --r-heading-color: #00f0ff;
+      --r-link-color: #00f0ff;
+      --r-selection-background-color: rgba(0, 240, 255, 0.3);
+    }
+    .reveal h1, .reveal h2, .reveal h3 { color: #00f0ff; text-transform: none; letter-spacing: -0.01em; }
+    .reveal .slides section { text-align: left; }
+    .reveal table { font-size: 0.85em; }
+    .reveal img { background: none; border: 1px solid rgba(0,240,255,0.2); box-shadow: 0 0 24px rgba(0,240,255,0.15); border-radius: 8px; }
+    .reveal code { color: #00f0ff; }
+    .reveal ul, .reveal ol { margin-left: 1.2em; }
+    .reveal blockquote { border-left: 3px solid #00f0ff; background: rgba(0,240,255,0.06); }
+    .video-wrapper {
+      position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      border-radius: 10px; border: 1px solid rgba(0,240,255,0.25); background: #000; margin: 0.8rem 0;
+    }
+    .video-wrapper iframe, .video-wrapper video {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Aula 01</h1>
+        <h2 style="color:#8899bb;">Introdução ao Curso</h2>
+        <p>Bem-vindos!</p>
+      </section>
+
+      <section>
+        <h2>Objetivos da disciplina</h2>
+        <ul>
+          <li>Compreender os conceitos fundamentais da área</li>
+          <li>Desenvolver habilidades práticas</li>
+          <li>Aplicar o conhecimento em situações reais</li>
+          <li>Trabalhar de forma colaborativa e autônoma</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Metodologia</h2>
+        <ol>
+          <li><strong>Aulas expositivas dialogadas</strong> (slides)</li>
+          <li><strong>Atividades de fixação</strong> (quizzes monitorados)</li>
+          <li><strong>Exercícios práticos</strong> e projetos</li>
+          <li><strong>Avaliação contínua</strong></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Exemplo de imagem</h2>
+        <p>Imagens ficam em <code>assets/media/imagens/</code> ou na pasta <code>recursos/</code> da aula.</p>
+        <p style="text-align:center; margin-top:1rem;">
+          <img src="../../assets/media/imagens/placeholder-diagrama.svg" alt="Diagrama de exemplo" style="max-height:360px;">
+        </p>
+      </section>
+
+      <section>
+        <h2>Exemplo de vídeo (YouTube)</h2>
+        <p>Prefira embeds do YouTube/Vimeo – o site fica mais leve.</p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Vídeo de exemplo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p style="font-size:0.65em; color:#8899bb; margin-top:0.5rem;">Substitua o ID do vídeo no atributo src.</p>
+      </section>
+
+      <section>
+        <h2>Vídeo local (HTML5)</h2>
+        <p>Coloque o arquivo em <code>assets/media/videos/</code> ou <code>recursos/</code>.</p>
+        <div class="video-wrapper">
+          <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#8899bb; background:#0a0e1a; flex-direction:column; gap:0.5rem;">
+            <span style="font-size:2rem; color:#00f0ff;">▶</span>
+            <span>Coloque aqui um arquivo .mp4</span>
+            <span style="font-size:0.75em;">docs/assets/media/videos/exemplo.mp4</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Ferramentas utilizadas</h2>
+        <ul>
+          <li>Este site (GitHub Pages) para material</li>
+          <li>Ambiente de desenvolvimento / laboratório</li>
+          <li>Plataforma da instituição (Classroom / Moodle / Teams)</li>
+          <li>Comunicação: e-mail institucional e fórum</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Como usar este material</h2>
+        <ul>
+          <li><strong>Slides</strong>: acompanhe a aula e revise depois</li>
+          <li><strong>Atividades</strong>: faça logo após a aula (feedback imediato)</li>
+          <li>Você pode refazer os quizzes quantas vezes quiser</li>
+          <li>Guarde o resultado para enviar ao professor quando solicitado</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Cronograma resumido</h2>
+        <table>
+          <thead>
+            <tr><th>Aula</th><th>Tema</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>01</td><td>Introdução</td><td>Hoje</td></tr>
+            <tr><td>02</td><td>Conceitos fundamentais</td><td>Próxima</td></tr>
+            <tr><td>03</td><td>...</td><td>Em breve</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Avaliação</h2>
+        <ul>
+          <li>Participação e atividades de fixação: <strong>30%</strong></li>
+          <li>Trabalhos / projetos: <strong>40%</strong></li>
+          <li>Avaliações formais: <strong>30%</strong></li>
+        </ul>
+        <p style="margin-top: 1.5em;">Dúvidas? Pergunte a qualquer momento.</p>
+      </section>
+
+      <section>
+        <h2>Próximos passos</h2>
+        <ol>
+          <li>Faça a <strong>atividade de fixação</strong> desta aula</li>
+          <li>Leia o material complementar (se houver)</li>
+          <li>Prepare-se para a Aula 02</li>
+        </ol>
+        <p style="margin-top: 1.5em; color:#00f0ff;"><strong>Obrigado e bons estudos!</strong></p>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: "fade",
+      backgroundTransition: "fade"
+    });
+  </script>
+</body>
+</html>

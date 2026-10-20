@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Material Didático – Aulas</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>ANÁLISE DE DADOS E BIG DATA</h1>
+    <p>Professor Eduardo Xavier</p>
+    <h2>Material Didático</h2>
+    <p>Slides · Atividades · Conhecimento em evolução</p>
+  </header>
+
+  <main class="container">
+    <h2 style="margin-bottom: 1.4rem; font-size: 1.15rem; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;">
+      Aulas do semestre
+    </h2>
+
+    <div class="aulas-grid">
+      <!-- Aula 01 -->
+      <article class="aula-card">
+        <div class="numero">Aula 01</div>
+        <h2>Apresentação</h2>
+        <p>Apresentação da disciplina, objetivos, metodologia e ferramentas que serão utilizadas ao longo do semestre.</p>
+        <div class="acoes">
+          <a class="btn btn-primary" href="aulas/01-apresentacao/slides.html">▶ Slides</a>
+          <a class="btn btn-outline" href="aulas/01-apresentacao/atividades.html">✎ Atividades</a>
+        </div>
+      </article>
+
+      <!-- Aula 02 -->
+      <article class="aula-card">
+        <div class="numero">Aula 02</div>
+        <h2>Conceitos Fundamentais</h2>
+        <p>Principais conceitos teóricos da área, terminologia essencial e exemplos práticos de aplicação.</p>
+        <div class="acoes">
+          <a class="btn btn-primary" href="aulas/02-exemplo-conceitos/slides.html">▶ Slides</a>
+          <a class="btn btn-outline" href="aulas/02-exemplo-conceitos/atividades.html">✎ Atividades</a>
+        </div>
+      </article>
+
+      <!-- Placeholder para nova aula – o professor deve copiar este bloco -->
+      <!--
+      <article class="aula-card">
+        <div class="numero">Aula 03</div>
+        <h2>Título da Nova Aula</h2>
+        <p>Descrição curta do que será abordado nesta aula.</p>
+        <div class="acoes">
+          <a class="btn btn-primary" href="aulas/03-nova-aula/slides.html">▶ Slides</a>
+          <a class="btn btn-outline" href="aulas/03-nova-aula/atividades.html">✎ Atividades</a>
+        </div>
+      </article>
+      -->
+    </div>
+
+    <section class="section-card" style="margin-top: 1rem;">
+      <h3>// Como o professor adiciona novas aulas</h3>
+      <ol style="padding-left: 1.3rem; color: var(--text-muted); line-height: 1.9;">
+        <li>Crie a pasta <code>docs/aulas/0X-nome-da-aula/</code></li>
+        <li>Copie <code>slides.md</code>, <code>slides.html</code> e <code>atividades.html</code> de uma aula existente</li>
+        <li>Edite o conteúdo e adicione mídias em <code>recursos/</code></li>
+        <li>Adicione um novo card nesta página (<code>index.html</code>)</li>
+        <li>Faça commit e push — o site atualiza automaticamente</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    Material Didático · Publicado via GitHub Pages · 
+    <a href="https://github.com/" target="_blank" rel="noopener">Ver repositório</a>
+  </footer>
+</body>
+</html>
